@@ -21,12 +21,17 @@ html, body{
 }
 
 .soldierCont{
+    position: absolute;
     display: flex;
     justify-content: flex-end;
+    min-height: 100%;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
 }
 .soldierCont__ghost{
-    position: absolute;
-    height: 100%;
+    /* position: absolute; */
+   
     filter: grayscale(100%) blur(1px) brightness(60%);
     
 }

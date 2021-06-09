@@ -27,6 +27,8 @@ class Menu {
     constructor(){
         this.menuItems = document.querySelectorAll(".card");
         this.backgroundImg = document.querySelector(".soldierCont__ghost");
+        this.selectionAudio = new Audio();
+        this.selectionAudio.src = "sounds/select.wav";
 
         this.imgSources = [
             "images/ghost.png",
@@ -40,8 +42,12 @@ class Menu {
         elements.forEach((element, index)=>{
             element.addEventListener("mouseover", ()=>{
                 this.backgroundImg.src = this.imgSources[index];
+                this.playSelectAudio();
             });
         });
+    }
+    playSelectAudio(){
+        this.selectionAudio.play();
     }
 }
 
@@ -49,6 +55,7 @@ class AudPlayer{
     constructor(){
         this.audio = new Audio();
         this.audio.src = "sounds/mw2song.m4a";
+     
 
         this.startAudio();
         this.replayAudio();
@@ -69,7 +76,7 @@ class AudPlayer{
     }
 }
 
-// let audPlayer = new AudPlayer();
+let audPlayer = new AudPlayer();
 
 
 
