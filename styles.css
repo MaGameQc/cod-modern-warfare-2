@@ -21,17 +21,17 @@ html, body{
 }
 
 .soldierCont{
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: flex-end;
-    min-height: 100%;
-    height: auto;
+    height: 100%;
     width: 100%;
-    object-fit: cover;
 }
 .soldierCont__ghost{
     /* position: absolute; */
-   
+    
+    height: 100%;
+   object-fit: cover;
     filter: grayscale(100%) blur(1px) brightness(60%);
     
 }
@@ -49,8 +49,9 @@ html, body{
     display: grid;
     min-height: 100vh;
     height: 100%;
-    grid-template-rows: 0.35fr 0.4fr 0.25fr;
+    grid-template-rows: 0.35fr 1fr 0.25fr;
     z-index: 2;
+    
 }
 
 .header{
@@ -67,12 +68,13 @@ html, body{
     justify-content: center;
     height: 100%;
     padding: 2rem;
+    margin: 1rem;
 
 }
 .logo__2{
     position: absolute;
     /* height: 12rem; */
-    height: clamp(3.5rem, 8vw, 12rem);
+    height: clamp(3.5rem, 8vw, 10rem);
     margin-right: 5%;
     filter: drop-shadow(0 0 0.2rem rgba(238, 194, 0, 1))
 }
@@ -91,21 +93,24 @@ html, body{
 }
 
 .nav{
+    position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 
 }
 .card{
+    position: relative;
     min-width: 22rem;
     max-width: 35rem;
     min-height: 18rem;
-    max-height: 32rem;
+    max-height: 22rem;
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 28%;
-    /* height: 100%; */
+    height: 100%;
     margin: 0.5rem 0.5rem;
     background-color: rgba(85, 85, 85, 0.8);
 }
